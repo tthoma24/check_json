@@ -5,10 +5,10 @@ use strict;
 use HTTP::Request::Common;
 use LWP::UserAgent;
 use JSON;
-use Nagios::Plugin;
+use Nagios::Monitoring::Plugin;
 use Data::Dumper;
 
-my $np = Nagios::Plugin->new(
+my $np = Nagios::Monitoring::Plugin->new(
     usage => "Usage: %s -u|--url <http://user:pass\@host:port/url> -a|--attributes <attributes> "
     . "[ -c|--critical <thresholds> ] [ -w|--warning <thresholds> ] "
     . "[ -e|--expect <value> ] "
